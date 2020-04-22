@@ -1,3 +1,6 @@
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/wtlgo/base4.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/wtlgo/base4/alerts/)
+[![Language grade: C/C++](https://img.shields.io/lgtm/grade/cpp/g/wtlgo/base4.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/wtlgo/base4/context:cpp)
+
 # base4
 
 Base64 has too many characters... It has to be fixed!
