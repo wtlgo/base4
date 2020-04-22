@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.12)
-project(base4-bin VERSION 1.0.0)
+project(base4-bin VERSION 1.0.1)
 
 add_executable(base4-bin src/main.cpp)
 target_link_libraries(base4-bin PUBLIC base4)
