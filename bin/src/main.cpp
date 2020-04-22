@@ -107,12 +107,11 @@ Config::Config(int argv, const char* argc[]) {
             break;
         }
         else if(strcmp("--charset", argc[n]) == 0) {
-            if(new_charset) {
+            if(++n >= argv || new_charset) {
                 mode = ERR_INVALID_ARG;
                 break;
             }
             
-            ++n;
             if(strlen(argc[n]) != 4) {
                 mode = ERR_CHARSET;
                 break;
