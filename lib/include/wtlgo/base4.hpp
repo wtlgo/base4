@@ -6,8 +6,9 @@
 
 namespace wtlgo {
 
-std::string base4_encode(const std::string& input, const std::array<char, 4>& charset = {'+', '-', '*', '/'});
-std::string base4_decode(const std::string& input, const std::array<char, 4>& charset = {'+', '-', '*', '/'});
+extern const std::array<char, 4> base4_default_charset; 
+std::string base4_encode(const std::string& input, const std::array<char, 4>& charset = base4_default_charset);
+std::string base4_decode(const std::string& input, const std::array<char, 4>& charset = base4_default_charset);
 
 }
 
