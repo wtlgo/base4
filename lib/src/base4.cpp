@@ -4,7 +4,7 @@
 #include <base4.hpp>
 
 const std::array<char, 4> wtlgo::base4_default_charset {
-    '+', '-', '*', '/'
+    '+', '-', '*', '%'
 };
 
 std::string wtlgo::base4_encode(const std::string& input, const std::array<char, 4>& charset) {
