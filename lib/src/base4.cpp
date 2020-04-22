@@ -34,13 +34,12 @@ std::string wtlgo::base4_decode(const std::string& input, const std::array<char,
         throw std::runtime_error("Invalid input: Found characters that are not in the current char set.");
     }
 
-    std::string res;
-
     std::unordered_map<char, uint8_t> char_map;
     for(uint8_t i = 0; i < charset.size(); ++i) {
         char_map[charset[i]] = i;
     }
-
+    
+    std::string res;
     for(auto it = input.cbegin(); it != input.cend(); it += 4) {
         const uint8_t next =
         (char_map.at(*it) << 6) +
