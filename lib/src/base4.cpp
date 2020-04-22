@@ -40,8 +40,9 @@ std::string wtlgo::base4_decode(const std::string& input, const std::array<char,
 
     const std::unordered_map<char, uint8_t> char_map = [&charset]{
         std::unordered_map<char, uint8_t> res;
-        for(uint8_t i = 0; i < charset.size(); ++i) {
-            res[charset[i]] = i;
+        uint8_t idx = 0;
+        for(char c : charset) {
+            res[c] = idx++;
         }
         return res;
     }();
