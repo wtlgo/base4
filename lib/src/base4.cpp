@@ -7,12 +7,12 @@ std::string wtlgo::base4_encode(const std::string& input, const std::array<char,
     std::string res;
 
     for(char c : input) {
-        std::array<uint8_t, 4> split;
-
-        split[0] = (c >> 6) & 0b11;
-        split[1] = (c >> 4) & 0b11;
-        split[2] = (c >> 2) & 0b11;
-        split[3] = c & 0b11;
+        const std::array<uint8_t, 4> split {
+            static_cast<uint8_t>((c >> 6) & 0b11),
+            static_cast<uint8_t>((c >> 4) & 0b11),
+            static_cast<uint8_t>((c >> 2) & 0b11),
+            static_cast<uint8_t>(c & 0b11)
+        };
 
         std::transform(split.cbegin(), split.cend(), std::back_inserter(res),
         [&charset](uint8_t code) {
