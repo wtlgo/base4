@@ -8,5 +8,6 @@ install(
     TARGETS base4 base4-bin
     LIBRARY DESTINATION lib/wtlgo COMPONENT Runtime
     ARCHIVE DESTINATION lib/wtlgo COMPONENT Development
+    RUNTIME DESTINATION bin COMPONENT Runtime
     PUBLIC_HEADER DESTINATION include/wtlgo COMPONENT Development
 )
