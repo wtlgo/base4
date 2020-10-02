@@ -78,21 +78,21 @@ std::string generate_help(const std::string& pname) {
     std::ostringstream out;
 
     out
-    << "Encode string:" << std::endl
-    << "$ " << pname << " encode \"foo\"" << std::endl
-    << std::endl
-    << "Decode string:" << std::endl
-    << "$ " << pname << " decode \"" << wtlgo::base4_encode("foo") << '\"' << std::endl
-    << std::endl
-    << "Encode string with specific charset:" << std::endl
-    << "$ " << pname << " encode --charset ABCD \"foo\"" << std::endl
-    << std::endl
-    << "Decode string with specific charset:" << std::endl
-    << "$ " << pname << " decode --charset ABCD \"" << wtlgo::base4_encode("foo", {'A', 'B', 'C', 'D'}) << '\"' << std::endl
-    << std::endl
-    << "Default charset is " << std::string(wtlgo::base4_default_charset.cbegin(), wtlgo::base4_default_charset.cend()) << std::endl
-    << std::endl
-    << "Help:" << std::endl
+    << "Encode string:\n"
+    << "$ " << pname << " encode \"foo\"\n"
+    << "\n"
+    << "Decode string:\n"
+    << "$ " << pname << " decode \"" << wtlgo::base4_encode("foo") << '\"' << "\n"
+    << "\n"
+    << "Encode string with specific charset:\n"
+    << "$ " << pname << " encode --charset ABCD \"foo\"" << "\n"
+    << "\n"
+    << "Decode string with specific charset:\n"
+    << "$ " << pname << " decode --charset ABCD \"" << wtlgo::base4_encode("foo", {'A', 'B', 'C', 'D'}) << '\"' << "\n"
+    << "\n"
+    << "Default charset is " << std::string(wtlgo::base4_default_charset.cbegin(), wtlgo::base4_default_charset.cend()) << "\n"
+    << "\n"
+    << "Help:\n"
     << "$ " << pname << " --help";
 
     return out.str();
